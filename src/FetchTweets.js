@@ -10,7 +10,4 @@ const FetchTweets = ({ fetchTweets }) => {
   );
 };
 
-export default connect(
-  null,
-  { fetchTweets },
-)(FetchTweets);
+export default connect(null, { fetchTweets })(FetchTweets);

@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import Tweet from './Tweet';
 
 const Tweets = ({ tweets = [] }) => {
+  console.log(tweets);
   return (
     <section className="Tweets">
       {tweets.map((tweet) => (

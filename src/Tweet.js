@@ -1,12 +1,15 @@
 import React from 'react';
 
 const Tweet = ({ tweet }) => {
+  console.log(tweet);
   return (
     <article className="Tweet">
       <header>
-        <h2>{tweet.user.name} writes:</h2>
+        <p>
+          {tweet.id} writes at {tweet.created_at}{' '}
+        </p>
+        <p>{tweet.text}</p>
       </header>
-      <p>{tweet.text}</p>
     </article>
   );
 };
