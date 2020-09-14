@@ -5,10 +5,13 @@ const Tweet = ({ tweet }) => {
   return (
     <article className="Tweet">
       <header>
+        <h3>
+          {tweet.id} - {tweet.city}
+        </h3>
         <p>
-          {tweet.id} writes at {tweet.created_at}{' '}
+          {' '}
+          {tweet.latitude} : {tweet.longitude}
         </p>
-        <p>{tweet.text}</p>
       </header>
     </article>
   );
