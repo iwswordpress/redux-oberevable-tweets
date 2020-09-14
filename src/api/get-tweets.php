@@ -17,7 +17,7 @@ function get_tweets($request) {
   foreach ($results as $objRS)//foreach loop  
   {  
       $json_array['id'] = $objRS->id;  
-      $json_array['city'] = "TWEET-".$objRS->city;  
+      $json_array['city'] = $objRS->city;  
       $json_array['country'] = $objRS->country;  
       $json_array['code'] = $objRS->code;  
       $json_array['latitude'] = $objRS->latitude;  
@@ -27,8 +27,14 @@ function get_tweets($request) {
       // here pushing the record array in to another array  
       array_push($json_data,$json_array);  
   }
-  wp_reset_query();
-  $posts =  $json_data; 
+  // wp_reset_query();
+  $tweet = array("id"=>35, "text"=>"message from tweet");
+  // $tweet = json_encode($tweet);
+ 
+  // create api { tweets: [{},{}...]}
+  $json_tweets['tweets']=$json_data;
+  
+  $posts =  $json_tweets; 
   // Create headers
   $response = new WP_REST_Response($posts);
   // Set response status - this can be customised 

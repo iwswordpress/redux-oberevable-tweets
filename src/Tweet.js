@@ -9,7 +9,6 @@ const Tweet = ({ tweet }) => {
           {tweet.id} - {tweet.city}
         </h3>
         <p>
-          {' '}
           {tweet.latitude} : {tweet.longitude}
         </p>
       </header>
