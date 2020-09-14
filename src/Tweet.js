@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Tweet = ({ tweet }) => {
-  console.log(tweet);
+  console.log('[TWEET] ', tweet);
   return (
     <article className="Tweet">
       <header>
